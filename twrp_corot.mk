@@ -27,7 +27,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 $(call inherit-product, device/xiaomi/corot/device.mk)
 
 PRODUCT_DEVICE := corot
-PRODUCT_NAME := lineage_corot
+PRODUCT_NAME := twrp_corot
 PRODUCT_BRAND := Redmi
 PRODUCT_MODEL := 23078RKD5C
 PRODUCT_MANUFACTURER := xiaomi
