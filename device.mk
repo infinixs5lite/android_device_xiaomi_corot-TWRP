@@ -22,7 +22,6 @@ AB_OTA_PARTITIONS += \
     boot \
     vbmeta_vendor \
     vbmeta_system
-BOARD_USES_RECOVERY_AS_BOOT := true
 
 PRODUCT_PACKAGES += \
     android.hardware.boot@1.2-impl \
