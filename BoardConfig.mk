@@ -76,6 +76,10 @@ BOARD_SUPER_PARTITION_GROUPS := xiaomi_dynamic_partitions
 BOARD_XIAOMI_DYNAMIC_PARTITIONS_PARTITION_LIST := system system vendor vendor product product mi_ext mi_ext odm odm vendor_dlkm vendor_dlkm odm_dlkm odm_dlkm system_dlkm system_dlkm
 BOARD_XIAOMI_DYNAMIC_PARTITIONS_SIZE := 9122611200 # TODO: Fix hardcoded value
 
+BOARD_PARTITION_LIST := $(call to-upper, $(BOARD_XIAOMI_DYNAMIC_PARTITIONS_PARTITION_LIST))
+$(foreach p, $(BOARD_PARTITION_LIST), $(eval BOARD_$(p)IMAGE_FILE_SYSTEM_TYPE := erofs))
+$(foreach p, $(BOARD_PARTITION_LIST), $(eval TARGET_COPY_OUT_$(p) := $(call to-lower, $(p))))
+
 # Platform
 TARGET_BOARD_PLATFORM := mt6985
 
@@ -95,7 +99,6 @@ BOARD_VNDK_VERSION := current
 BOARD_AVB_ENABLE := true
 
 # Vendor_boot recovery ramdisk
-BOARD_USES_RECOVERY_AS_BOOT := 
 BOARD_USES_GENERIC_KERNEL_IMAGE := true
 BOARD_MOVE_RECOVERY_RESOURCES_TO_VENDOR_BOOT := true
 BOARD_EXCLUDE_KERNEL_FROM_RECOVERY_IMAGE := 

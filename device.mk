@@ -21,7 +21,8 @@ AB_OTA_PARTITIONS += \
     odm_dlkm \
     boot \
     vbmeta_vendor \
-    vbmeta_system
+    vbmeta_system \
+    Vendor_boot
 
 PRODUCT_PACKAGES += \
     android.hardware.boot@1.2-impl \
