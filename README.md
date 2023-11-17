@@ -1,4 +1,7 @@
-# Recovery device tree for REDMI K60 ULTRA
+# [WIP] TWRP device tree for REDMI K60 ULTRA
+
+[WIP] 注意：本项目编译出的 vendor_boot 还在测试阶段，无法正常启动！
+=========================================
 
 REDMI K60 ULTRA (codenamed _"corot"_) 
 
@@ -26,7 +29,7 @@ Works:
 ## To use it:
 
 ```
-fastboot flash recovery_ab out/target/product/corot/recovery.img
+fastboot flash vendor_boot out/target/product/corot/vendor_boot.img
 ```
 ## Device picture
 ![corot](https://i02.appmifile.com/329_operator_sg/14/08/2023/3fcfdc0e83081349795e70056be19e35.png)
