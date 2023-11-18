@@ -42,7 +42,7 @@ Then to setup the build:
 
 Build command that applies:
 
-- Vendor_boot image ramdisk: `mka vendorbootimage`
+- `mka vendorbootimage`
 
 ## To use it:
 
