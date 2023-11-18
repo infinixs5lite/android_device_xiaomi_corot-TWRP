@@ -26,11 +26,28 @@ Positioning | GPS, A-GPS, BeiDou, Glonass, Galileo, NavIC
 Works:
 
  -: preparatory phase for the project
+## Getting Started ##
+To get started with AOSP sources to build TWRP, you'll need to get familiar
+with [Git and Repo](https://source.android.com/source/using-repo.html).
+
+To initialize your local repository using the AOSP trees to build TWRP, use a command like this:
+
+    repo init -u https://github.com/corot-scrapyard/android_device_xiaomi_corot-TWRP.git -b twrp-12.1
+To initialize a shallow clone, which will save even more space, use a command like this:
+
+    repo init --depth=1 -u https://github.com/corot-scrapyard/android_device_xiaomi_corot-TWRP.git -b twrp-12.1
+Then to setup the build:
+    
+    cd <source-dir>; export ALLOW_MISSING_DEPENDENCIES=true; . build/envsetup.sh; lunch twrp_<device>-eng
+
+Build command that applies:
+
+- Vendor_boot image ramdisk: `mka vendorbootimage`
 
 ## To use it:
 
 ```
-fastboot flash vendor_boot out/target/product/corot/vendor_boot.img
+fastboot flash vendor_boot vendor_boot.img
 ```
 ## Device picture
 ![corot](https://i02.appmifile.com/329_operator_sg/14/08/2023/3fcfdc0e83081349795e70056be19e35.png)
