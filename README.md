@@ -2,6 +2,7 @@
 
 [WIP] 注意：本项目编译出的 vendor_boot 还在测试阶段，无法正常启动！
 =========================================
+## Thanks @YuKongA
 
 REDMI K60 ULTRA (codenamed _"corot"_) 
 
